@@ -1,0 +1,23 @@
+# 데이터 / 모델 가중치 (용량 큼)
+*.json
+*.csv
+*.nc
+*.pt
+*.bin
+*.pth
+
+# 출력 이미지
+*.png
+*.jpg
+
+# Python 캐시
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# 코랩 마운트
+/content/
+
+# 에디터
+.vscode/
+.DS_Store

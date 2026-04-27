@@ -1,0 +1,20 @@
+# ── 경로 (Colab 기준, 본인 드라이브 경로로 수정) ──
+work_dir: "/content/drive/MyDrive/GK2A_Train"
+
+# ── 클래스 ────────────────────────────────────────
+labels: ['호우', '강풍', '대설', '한파', '폭염', '태풍', '정상']
+
+# ── 모델 ──────────────────────────────────────────
+clip_model: "openai/clip-vit-large-patch14"
+num_images: 6        # 샘플당 위성 이미지 수 (IR105, WV069, SW038 × 현재/과거)
+image_size: 224
+max_text_len: 77
+dropout: 0.3
+
+# ── 학습 ──────────────────────────────────────────
+epochs: 15
+batch_size: 8
+lr_clip: 1e-5        # CLIP 인코더 lr (사전학습 보존)
+lr_head: 1e-3        # FC 분류 헤드 lr
+weight_decay: 0.01
+grad_clip: 1.0
